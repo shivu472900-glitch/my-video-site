@@ -1,0 +1,11 @@
+# Node / local environment
+node_modules/
+.DS_Store
+*.log
+
+# OS files
+Thumbs.db
+
+# Do NOT ignore the video file — we intentionally track it
+# (remove the following entry if you accidentally added it)
+# public/videos/*.mp4

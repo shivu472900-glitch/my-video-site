@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hosted Video — Required Structure</title>
+  <link rel="stylesheet" href="public/assets/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Hosted Video</h1>
+      <p class="subtitle">Required structure: video served from <code>/public/videos/video.mp4</code></p>
+    </header>
+
+    <section class="player">
+      <!-- REQUIRED: path must match repository structure exactly -->
+      <video id="mainVideo" controls preload="metadata" playsinline poster="">
+        <source src="public/videos/video.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+
+      <div class="meta">
+        <label>Direct file URL:</label>
+        <code id="direct-url">/public/videos/video.mp4</code>
+      </div>
+    </section>
+
+    <footer>
+      <small>Do not rename or remove <code>public/videos/video.mp4</code>.</small>
+    </footer>
+  </main>
+
+  <script>
+    // Minimal runtime checks (keeps file required)
+    (function(){
+      const v = document.getElementById('mainVideo');
+      v.addEventListener('error', function(e){
+        console.warn('Video failed to load. Ensure file public/videos/video.mp4 exists and is a valid MP4.', e);
+      });
+    })();
+  </script>
+</body>
+</html>
