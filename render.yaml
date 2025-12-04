@@ -1,0 +1,11 @@
+# render.yaml — required only if you want infrastructure-as-code for Render
+# Keep this file at repo root if used.
+services:
+  - type: static
+    name: my-video-site
+    env: static
+    branch: main
+    buildCommand: ""
+    staticPublishPath: "/"
+    envVars: []
+    autoDeploy: true
