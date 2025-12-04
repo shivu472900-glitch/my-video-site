@@ -1,0 +1,20 @@
+/* Required minimal styling */
+:root{
+  --bg:#0f1720;
+  --card:#0b1220;
+  --text:#e6eef8;
+  --muted:#9fb0c8;
+  --accent:#2dd4bf;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+.container{max-width:1000px;margin:28px auto;padding:20px}
+header h1{margin:0 0 6px;font-size:20px}
+.subtitle{margin:0 0 16px;color:var(--muted);font-size:13px}
+
+.player{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 30px rgba(2,6,23,.6)}
+video{width:100%;height:auto;border-radius:8px;display:block;background:#000}
+.meta{margin-top:10px;color:var(--muted);font-size:13px}
+.meta code{background:#071022;padding:4px 6px;border-radius:4px;color:var(--accent)}
+footer{margin-top:12px;color:var(--muted);font-size:12px}
